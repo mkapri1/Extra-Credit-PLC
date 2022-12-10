@@ -28,8 +28,7 @@
   |Not Equal| != |
   |Assignment| = |
   
-  int_lit
-  boolean -> Yes and No
+  Boolean -> Yes and No
   
 ### Grammar
   ````
@@ -83,6 +82,33 @@ IF-ELSE:
           return error
         return M_stmt(<stmt2>,s)
         
+````
+WHILE:
+````
+  <while_stmt> --> ROF ( <bool_expr> ) <stmt>
+  
+  M_while(ROF (bool_expr) <stmt>, s) -->
+    
+    if M_b(<bool_expr>, s) == error
+      return error
+    
+    if M_b (<bool_expr>,s) 
+       if M_stmt(<stmt>,s) == error
+          return error
+       return M_stmt(<stmt>,s)
+````
+ASSIGNMENT:
+````
+  <assignment> --> `id` `=` <expr> `;`
+  
+  M_assign( id  <expr>, s) -->
+    if M_op(=, s) == error
+      return error
+    if M_op(=,s)
+      if M_expr(<expr> , s) == error
+        return error
+      return M_expr(<expr>,s)
+  
 ````
 
     
