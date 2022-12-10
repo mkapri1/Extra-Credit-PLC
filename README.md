@@ -30,6 +30,40 @@
   
   Boolean -> Yes and No
   
+  **Token Codes**
+  
+  |Operators | Token Codes |
+  | ---------|-------------|
+  | Addition |  16
+  | Subtraction| 17        |
+  | Multiplication| 18      |
+  | Division | 19 |
+  | Less than | 23 |
+  | Greater than | 24 |
+  | Less than equal to | 25 |
+  | Greater than equal to | 26 |
+  | Equal | 27 |
+  | Not Equal to |28 |
+  | Assignment | 15 |
+  | Modulus | 22 |
+
+  |Keywords| Token Codes|
+  |--------|------------|
+  |varie| 45
+  |ROF| 32|
+  |$| 33|
+  |&| 34|
+  |#| 29|
+  |$| 30|
+
+  |Others|Token Codes|
+  |------|-----------|
+  |Identifiers| 11|
+  |EOF| -1|
+  |Left Paren| 20|
+  |Right Paren| 21|
+  |End of Statement (;)| 31|
+  
 ### Grammar
   ````
   <program> --> `#`<stmt_list>`@`
