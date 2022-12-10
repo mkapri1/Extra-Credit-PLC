@@ -10,7 +10,8 @@
   |END| @|
   |Declaration| varie|
 
-  
+  | | |
+  |--|--|
   |Addition| + |
   |Subraction| -|
   |Multiplication| *|
