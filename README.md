@@ -108,8 +108,47 @@ ASSIGNMENT:
       if M_expr(<expr> , s) == error
         return error
       return M_expr(<expr>,s)
+      
+      if M_e( ;,s) == error
+        return error
+      return M_e(;,s)
   
 ````
+BLOCK:
+````
+  <block> --> { <stmt_list> }
+  
+  M_block( { <stmt_list> } ,s ) -->
+    if M_s ( {, s) == error
+      return error
+    if M_s( {,s)
+      if M_stmtList (<stmt_list> ,s) == error
+        return error
+      return M_stmtList(<stmt_list>,s)
+      
+      if M_e( },s) == error
+        return error
+      return M_e(},s)
+     
+
+````
+DECLARE:
+````
+ <declare> --> varie id ;
+ 
+  M_declare(varie id, s) -->
+    if M_var( varie,s) == error
+      return error
+    if M_var( varie,s)
+      if M_id( id,s) == error
+        return error
+      return M_id(id,s)
+      
+      if M_c( ;,s) == error
+        return error
+      return M_c(;,s)
+      
+ ````
 
     
   
